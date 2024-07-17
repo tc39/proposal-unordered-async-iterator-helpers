@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "proposal-unordered-async-iterator-helpers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/michaelficarra/proposal-unordered-async-iterator-helpers.git"
+  },
+  "author": "Michael Ficarra",
+  "bugs": {
+    "url": "https://github.com/michaelficarra/proposal-unordered-async-iterator-helpers/issues"
+  },
+  "homepage": "https://github.com/michaelficarra/proposal-unordered-async-iterator-helpers#readme",
+  "devDependencies": {
+    "typescript": "5.5.3"
+  },
+  "dependencies": {
+  }
+}
