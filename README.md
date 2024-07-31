@@ -15,7 +15,7 @@ Later, when working on the async iterator helpers proposal and trying to maximis
 
 ## Proposal
 
-The async iterator helpers proposal introduces a `.toAsync()` method on `Iterator.prototype` to lift the iterator to an async iterator with `AsyncIterator.prototype` as its prototype. `AsyncIterator.prototype` has all of the same method names async `Iterator.prototype`. This proposal takes a similar approach.
+The async iterator helpers proposal introduces a `.toAsync()` method on `Iterator.prototype` to lift the iterator to an async iterator with `AsyncIterator.prototype` as its prototype. `AsyncIterator.prototype` has all of the same method names as `Iterator.prototype`. This proposal takes a similar approach.
 
 `AsyncIterator.prototype` gets a method named `.unordered()` to lift an async iterator into an unordered async iterator with `UnorderedAsyncIterator.prototype` as its prototype. `UnorderedAsyncIterator.prototype` has all the same method names as `Iterator.prototype` and `AsyncIterator.prototype` (aside from `.toAsync()` and `.unordered()` probably?), except their implementations are able to achieve much higher concurrency by possibly resolving vended Promises in an order other than the order they were vended.
 
