@@ -7,6 +7,10 @@ JavaScript Unordered Async Iterator Helpers Proposal
 
 **Authors:** Michael Ficarra
 
+## Presentations to Committee
+
+- [July 2024: Stage 1](https://docs.google.com/presentation/d/1EDhoV4Vyh1Pte-W2qWvvCeLwhQ61dMFT55GNg0VeDLM)
+
 ## Background
 
 An early form of the [iterator helpers MVP proposal](https://github.com/tc39/proposal-iterator-helpers) included variants of each iterator helper MVP method on `AsyncIterator.prototype`. These methods were specified to match the behaviour of a naive generator-based implementation, with the philosophy that reasoning about their behaviour would be as simple as saying "what would this do in the first implementation that comes to mind?". This unfortunately meant that the async iterator helper variants adopted the undesirable queueing behaviour of generators: no matter how many times the produced async iterator was `next()`-ed without waiting for outstanding promises to settle, the underlying iterator would never have more than one outstanding `next()`. The high-level consequence of this is that async iterators that supported (and could benefit from) concurrent `next()`s would lose their support when transformed by any of the transformation methods provided by the iterator helpers MVP. To buy ourselves time to resolve this issue without holding up sync iterator helpers, we split async iterator helpers out into [their own proposal](https://github.com/tc39/proposal-async-iterator-helpers). *Note: I am very grateful to the community members who got involved and forced us to think harder about this, spend extra time, and not just do the easy thing!*
