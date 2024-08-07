@@ -1,7 +1,7 @@
 JavaScript Unordered Async Iterator Helpers Proposal
 ====================================================
 
-**Stage:** 0
+**Stage:** 1
 
 **Champions:** Michael Ficarra
 
