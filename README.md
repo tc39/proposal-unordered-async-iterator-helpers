@@ -36,6 +36,8 @@ Because unordered helpers provide no advantage in the absence of concurrent call
 - should the names of `.toAsync()` and `.unordered()` match better?
   - `AsyncIterator.prototype.toUnordered()`?
   - `Iterator.prototype.async()`?
+- should UnorderedAsyncIterator.prototype have a `.unordered()` method?
+  - likewise, should {Unordered,}AsyncIterator.prototype have a `.toAsync()`?
 - require the concurrency parameter?
   - concurrency of 1 is basically like calling an ordered helper (bad)
 
